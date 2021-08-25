@@ -1,0 +1,165 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+
+int main() {
+
+	float salario, INSS, IRRF, vldependente, baseimposto, salarioliquido;
+	int dependente;
+	
+	printf("informe o salario: ");
+	scanf("%f", &salario);
+	printf("informe quantidade de dependentes: ");
+	scanf("%d", &dependente);
+	
+
+		//calculo salario liquido
+	
+		if(salario<=1100.01){
+			printf("INSS: %.2f",INSS = salario*0.075);
+			printf("\nDeducao dependente: %.2f",dependente*189.59);
+			printf("\nBase IRRF: %.2f", baseimposto=(salario-(INSS+(dependente*189.59))));
+
+				if(baseimposto<=1903.98){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = baseimposto*0);
+				}
+				
+				else if(baseimposto>=1903.99 & baseimposto<=2826.65){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.075)-142.80);
+				}
+				
+				else if(baseimposto>=2826.66 & baseimposto<=3751.05){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.15)-354.80);
+				}
+				else if(baseimposto>=3751.06 & baseimposto<=4664.68){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.2250)-636.13);
+				}
+				
+				else if(baseimposto>4664.68){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.2750)-869.36);
+				}			
+			
+			printf("\nRemuneracao liquida: %.2f", salarioliquido = salario-(INSS+IRRF));
+			
+		}	
+		
+		else if(salario>=1100.01 & salario<=2203.48){
+			printf("INSS: %.2f",INSS = ((salario-1100)*0.09)+82.50);
+			printf("\nDeducao dependente: %.2f", dependente*189.59);
+			printf("\nBase IRRF: %.2f", baseimposto=(salario-(INSS+(dependente*189.59))));
+
+				if(baseimposto<=1903.98){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = baseimposto*0);
+				}
+				
+				else if(baseimposto>=1903.99 & baseimposto<=2826.65){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.075)-142.80);
+				}
+				
+				else if(baseimposto>=2826.66 & baseimposto<=3751.05){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.15)-354.80);
+				}
+				if(baseimposto>=3751.06 & baseimposto<=4664.68){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.2250)-636.13);
+				}
+				
+				else if(baseimposto>4664.68){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.2750)-869.36);
+				}			
+			
+			printf("\nRemuneracao liquida: %.2f", salarioliquido = salario-(INSS+IRRF));
+			
+		}		
+	
+		else if(salario>=2203.49 & salario<=3305.22){
+			printf("INSS: %.2f",INSS = ((salario-2203.48)*0.12)+181.81);
+			printf("\nDeducao dependente: %.2f", dependente*189.59);
+			printf("\nBase IRRF: %.2f", baseimposto=(salario-(INSS+(dependente*189.59))));
+
+				if(baseimposto<=1903.98){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = baseimposto*0);
+				}
+				
+				else if(baseimposto>=1903.99 & baseimposto<=2826.65){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.075)-142.80);
+				}
+				
+				else if(baseimposto>=2826.66 & baseimposto<=3751.05){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.15)-354.80);
+				}
+				else if(baseimposto>=3751.06 & baseimposto<=4664.68){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.2250)-636.13);
+				}
+				
+				else if(baseimposto>4664.68){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.2750)-869.36);
+				}
+				
+			printf("\nRemuneracao liquida: %.2f", salarioliquido = salario-(INSS+IRRF));
+
+		}
+		
+		else if(salario>=3305.23 & salario<=6433.57){
+			printf("INSS: %.2f",INSS = ((salario-3305.22)*0.14)+314.01);
+			printf("\nDeducao dependente: %.2f", dependente*189.59);
+			printf("\nBase IRRF: %.2f", baseimposto=(salario-(INSS+(dependente*189.59))));
+
+				if(baseimposto<=1903.98){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = baseimposto*0);
+				}
+				
+				else if(baseimposto>=1903.99 & baseimposto<=2826.65){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.075)-142.80);
+				}
+				
+				else if(baseimposto>=2826.66 & baseimposto<=3751.05){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.15)-354.80);
+				}
+				else if(baseimposto>=3751.06 & baseimposto<=4664.68){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.2250)-636.13);
+				}
+				
+				else if(baseimposto>4664.68){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.2750)-869.36);
+				}
+				
+		printf("\nRemuneracao liquida: %.2f", salarioliquido = salario-(INSS+IRRF));
+
+		}
+
+		if (salario>6433.57){
+			printf("INSS: %.2f",INSS = 751.99);
+			printf("\nDeducao dependente: %.2f", dependente*189.59);
+			printf("\nBase IRRF: %.2f", baseimposto=(salario-(INSS+(dependente*189.59))));
+
+				if(baseimposto<=1903.98){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = baseimposto*0);
+				}
+				
+				if(baseimposto>=1903.99 & baseimposto<=2826.65){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.075)-142.80);
+				}
+				
+				if(baseimposto>=2826.66 & baseimposto<=3751.05){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.15)-354.80);
+				}
+				if(baseimposto>=3751.06 & baseimposto<=4664.68){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.2250)-636.13);
+				}
+				
+				if(baseimposto>4664.68){				
+					printf("\nIRRF retido na fonte: %.2f", IRRF = (baseimposto*0.2750)-869.36);
+				}
+
+
+			printf("\nRemuneracao liquida: %.2f", salarioliquido = salario-(INSS+IRRF));
+		
+		}
+
+		
+				
+	return 0;	
+
+}
